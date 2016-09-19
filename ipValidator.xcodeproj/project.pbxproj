@@ -28,10 +28,10 @@
 		D17306E01D8D867E000EFDDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D17306E21D8D867E000EFDDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D17306E81D8D89F7000EFDDA /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
-		D1827A441D8EF8AA00D8E5CC /* ExportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExportViewController.swift; path = ../ExportViewController.swift; sourceTree = "<group>"; };
-		D1827A461D8EF8B900D8E5CC /* DNSConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DNSConfigViewController.swift; path = ../DNSConfigViewController.swift; sourceTree = "<group>"; };
+		D1827A441D8EF8AA00D8E5CC /* ExportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
+		D1827A461D8EF8B900D8E5CC /* DNSConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSConfigViewController.swift; sourceTree = "<group>"; };
 		D1827A481D8F0C9100D8E5CC /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		D1CEF4AE1D8DC47300C8D9B7 /* allIPsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = allIPsTableViewController.swift; path = ../allIPsTableViewController.swift; sourceTree = "<group>"; };
+		D1CEF4AE1D8DC47300C8D9B7 /* allIPsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = allIPsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
