@@ -1,14 +1,72 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AyO-yd-CCu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--About-->
+        <scene sceneID="qnC-By-LuF">
+            <objects>
+                <viewController id="xbZ-T9-uTW" customClass="AboutViewController" customModule="ipValidator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PRX-IR-O69"/>
+                        <viewControllerLayoutGuide type="bottom" id="4we-kY-16L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aC4-aC-XNL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxO-VD-RtQ">
+                                <attributedString key="attributedText">
+                                    <fragment content="Network Calculator &amp; Validator">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name=".SFNSText"/>
+                                            <font key="NSOriginalFont" size="24" name=".SFNSText"/>
+                                            <shadow key="NSShadow" blurRadius="10">
+                                                <size key="offset" width="1.8369701987210297e-16" height="3"/>
+                                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.33333333333333331" colorSpace="calibratedRGB"/>
+                                            </shadow>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+This application calculates and verifies ip addresses by calculating possible ip addresses
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="18" name=".AppleSystemUIFont"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wxO-VD-RtQ" firstAttribute="leading" secondItem="aC4-aC-XNL" secondAttribute="leadingMargin" id="IYu-Qm-BYx"/>
+                            <constraint firstItem="wxO-VD-RtQ" firstAttribute="top" secondItem="PRX-IR-O69" secondAttribute="bottom" id="jEm-Aa-h9D"/>
+                            <constraint firstItem="4we-kY-16L" firstAttribute="top" secondItem="wxO-VD-RtQ" secondAttribute="bottom" id="jFl-aA-nxq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wxO-VD-RtQ" secondAttribute="trailing" id="nWj-OI-N8d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="pNg-fl-W50">
+                        <barButtonItem key="rightBarButtonItem" title="GitHub Profile" id="Tgj-Qe-BXs">
+                            <connections>
+                                <action selector="githubProfile:" destination="xbZ-T9-uTW" id="gzG-Pw-KRd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lie-ye-hMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965.5999999999999" y="-560.86956521739137"/>
+        </scene>
+        <!--IP Validator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ipValidator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +74,319 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="OSa-L1-HXs">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c63-bd-yaq">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" translatesAutoresizingMaskIntoConstraints="NO" id="ERa-EF-YeM">
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="26x-9R-r96"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="M0S-R3-KAm"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subnet Mask" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5r-tQ-bcL">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" translatesAutoresizingMaskIntoConstraints="NO" id="inT-7L-jhc">
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="yks-KI-5Pa"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="c7e-m2-LVS"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connectable IP Addresses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIx-5y-Gsj">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" translatesAutoresizingMaskIntoConstraints="NO" id="fJt-LA-JR3">
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="VQi-bC-FVb"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ovH-JW-LcS"/>
+                                        </connections>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OSa-L1-HXs" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="WZX-jZ-r3x"/>
+                            <constraint firstItem="OSa-L1-HXs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Y5E-Yf-iOs"/>
+                            <constraint firstItem="OSa-L1-HXs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="kJg-IK-EP5"/>
+                            <constraint firstItem="OSa-L1-HXs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lS2-7V-rQW"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="IP Validator" id="2pd-gS-vqk">
+                        <barButtonItem key="leftBarButtonItem" title="About" id="Fad-BN-lBI">
+                            <connections>
+                                <segue destination="xbZ-T9-uTW" kind="show" id="FNA-ns-O1u"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Validate" id="R6B-8a-sEl">
+                            <connections>
+                                <segue destination="V74-Q7-wZc" kind="show" id="CfV-vD-5Gc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="IPpicker" destination="ERa-EF-YeM" id="TcH-BZ-U12"/>
+                        <outlet property="RTpicker" destination="fJt-LA-JR3" id="9nQ-XT-Zl4"/>
+                        <outlet property="SNpicker" destination="inT-7L-jhc" id="apN-Ou-trH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="wIg-FI-8yh">
+            <objects>
+                <tableViewController id="V74-Q7-wZc" customClass="ResultsTableViewController" customModule="ipValidator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="7uX-yC-Ese">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" textLabel="e9a-7J-0SY" detailTextLabel="AQN-uZ-2kU" style="IBUITableViewCellStyleValue1" id="rkk-CH-aHy">
+                                <rect key="frame" x="0.0" y="120" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rkk-CH-aHy" id="SA4-ZN-tH2">
+                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e9a-7J-0SY">
+                                            <frame key="frameInset" minX="15" minY="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AQN-uZ-2kU">
+                                            <frame key="frameInset" minX="316" minY="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="showAll" textLabel="Ouo-oH-10n" style="IBUITableViewCellStyleDefault" id="OOB-e7-ibz">
+                                <rect key="frame" x="0.0" y="164" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OOB-e7-ibz" id="Cei-Mf-0On">
+                                    <frame key="frameInset" width="342" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Show All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ouo-oH-10n">
+                                            <frame key="frameInset" minX="15" width="325" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Q5W-MB-wwz" kind="show" id="hsn-Mt-bsf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="V74-Q7-wZc" id="NZD-iu-OLq"/>
+                            <outlet property="delegate" destination="V74-Q7-wZc" id="1pK-4l-23n"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Results" id="QqD-jL-32a">
+                        <barButtonItem key="rightBarButtonItem" title="Export" id="Ezb-tO-SRW">
+                            <connections>
+                                <segue destination="ecm-x3-BV3" kind="show" id="jHq-aQ-x89"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FKI-4P-ZQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1966" y="139"/>
+        </scene>
+        <!--DNS & Gateway Config-->
+        <scene sceneID="FnL-lP-11B">
+            <objects>
+                <viewController id="ecm-x3-BV3" customClass="DNSConfigViewController" customModule="ipValidator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="05x-bE-8ph"/>
+                        <viewControllerLayoutGuide type="bottom" id="13B-SN-15N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x4P-Qf-ugY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="psD-Hm-Iuo">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gateway" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-IN-ddh">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" translatesAutoresizingMaskIntoConstraints="NO" id="YtR-X6-oW5">
+                                        <connections>
+                                            <outlet property="dataSource" destination="ecm-x3-BV3" id="psb-za-MzD"/>
+                                            <outlet property="delegate" destination="ecm-x3-BV3" id="fW9-S8-FoK"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DNS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09X-C0-sM5">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" translatesAutoresizingMaskIntoConstraints="NO" id="Hxv-RJ-w25">
+                                        <connections>
+                                            <outlet property="dataSource" destination="ecm-x3-BV3" id="5wO-Aq-lJl"/>
+                                            <outlet property="delegate" destination="ecm-x3-BV3" id="qTZ-41-BDP"/>
+                                        </connections>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="05x-bE-8ph" firstAttribute="bottom" secondItem="psD-Hm-Iuo" secondAttribute="top" id="7fj-hV-OaH"/>
+                            <constraint firstItem="psD-Hm-Iuo" firstAttribute="bottom" secondItem="13B-SN-15N" secondAttribute="top" id="Nk8-aD-AM5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="psD-Hm-Iuo" secondAttribute="trailing" id="QtU-AB-EZj"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="psD-Hm-Iuo" secondAttribute="leading" id="r7S-j9-vhM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DNS &amp; Gateway Config" id="9UZ-kG-ZWY">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="lRh-kj-9b7">
+                            <connections>
+                                <segue destination="1TN-WW-bLM" kind="show" id="b35-Hw-1hh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="DNSPicker" destination="Hxv-RJ-w25" id="1Z9-hL-MFT"/>
+                        <outlet property="GWPicker" destination="YtR-X6-oW5" id="5WT-6v-6ka"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w4e-hd-AZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2836" y="139"/>
+        </scene>
+        <!--Export Config-->
+        <scene sceneID="n7f-dR-j1u">
+            <objects>
+                <viewController id="1TN-WW-bLM" customClass="ExportViewController" customModule="ipValidator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2h9-cN-CAl"/>
+                        <viewControllerLayoutGuide type="bottom" id="KEq-OZ-vTM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aYD-Nd-CM6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqt-uR-6U3">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text"># dhcpcd.conf
+interface eth0
+static ip_address=192.168.1.141/24
+static routers=192.168.1.1
+static domain_name_servers=192.168.1.1</string>
+                                <color key="textColor" red="1" green="0.21954255705544823" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fqt-uR-6U3" firstAttribute="top" secondItem="aYD-Nd-CM6" secondAttribute="top" id="38T-uf-6MF"/>
+                            <constraint firstItem="KEq-OZ-vTM" firstAttribute="top" secondItem="fqt-uR-6U3" secondAttribute="bottom" id="FXX-9v-7ov"/>
+                            <constraint firstAttribute="trailing" secondItem="fqt-uR-6U3" secondAttribute="trailing" id="IaV-PC-KvZ"/>
+                            <constraint firstItem="fqt-uR-6U3" firstAttribute="leading" secondItem="aYD-Nd-CM6" secondAttribute="leading" id="bPN-OR-mkr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Export Config" id="O9Y-zO-0a1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="BSm-wP-5Yl">
+                            <connections>
+                                <action selector="formatAction:" destination="1TN-WW-bLM" id="1wv-9j-UtT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="formatButton" destination="BSm-wP-5Yl" id="z4k-g6-87I"/>
+                        <outlet property="textField" destination="fqt-uR-6U3" id="HaL-Tp-Crr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3F3-Qd-qiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3612" y="138.98050974512745"/>
+        </scene>
+        <!--All Connectable IP's-->
+        <scene sceneID="i0s-Zp-3Ri">
+            <objects>
+                <tableViewController id="Q5W-MB-wwz" customClass="allIPsTableViewController" customModule="ipValidator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ur1-gN-oBM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" textLabel="adf-Ux-Hnk" detailTextLabel="FLy-PF-kG7" style="IBUITableViewCellStyleValue1" id="BeL-zF-zXA">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BeL-zF-zXA" id="CFQ-je-3NQ">
+                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Adress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="adf-Ux-Hnk">
+                                            <frame key="frameInset" minX="15" minY="12" width="53" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FLy-PF-kG7">
+                                            <frame key="frameInset" minX="316" minY="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Q5W-MB-wwz" id="rH2-Sh-Nf9"/>
+                            <outlet property="delegate" destination="Q5W-MB-wwz" id="q4h-4H-11h"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="All Connectable IP's" id="Thz-cK-J3u"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ILw-wu-De9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2836" y="-561"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JNa-HU-4eR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AyO-yd-CCu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0kI-9Z-d0n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wIM-6c-Qnt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gL-hv-oEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
