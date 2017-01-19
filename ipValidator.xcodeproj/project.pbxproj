@@ -50,7 +50,6 @@
 		D17306CA1D8D867E000EFDDA = {
 			isa = PBXGroup;
 			children = (
-				D1572F671D8FCD2A00FFC94F /* IPAddress.swift */,
 				D17306D51D8D867E000EFDDA /* ipValidator */,
 				D17306D41D8D867E000EFDDA /* Products */,
 			);
@@ -67,6 +66,7 @@
 		D17306D51D8D867E000EFDDA /* ipValidator */ = {
 			isa = PBXGroup;
 			children = (
+				D1572F671D8FCD2A00FFC94F /* IPAddress.swift */,
 				D1CEF4AE1D8DC47300C8D9B7 /* allIPsTableViewController.swift */,
 				D1827A441D8EF8AA00D8E5CC /* ExportViewController.swift */,
 				D1827A461D8EF8B900D8E5CC /* DNSConfigViewController.swift */,
