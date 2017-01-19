@@ -23,7 +23,7 @@ import UIKit
 
 class AboutViewController: UIViewController {
 	@IBAction func githubProfile(_ sender: AnyObject) {
-		UIApplication.shared.open(URL(string: "https://github.com/mehmeteminkartal/")!, options: [:], completionHandler: nil);
+		UIApplication.shared.open(URL(string: "https://github.com/mehmeteminkartal/ipValidator/")!, options: [:], completionHandler: nil);
 	}
 
     override func viewDidLoad() {

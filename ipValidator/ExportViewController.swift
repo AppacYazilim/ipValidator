@@ -127,7 +127,7 @@ class ExportViewController: UIViewController {
 		
 		
 		alert.addAction(UIAlertAction(title: "Share", style: .default, handler: { (_) in
-			let objectsToShare = [self.textField.attributedText,URL(string: "https://www.mekatrotekno.com/")] as [Any]
+			let objectsToShare = [self.textField.attributedText,URL(string: "https://www.mekatrotekno.com/")!] as [Any]
 			let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
 //			activityVC.excludedActivityTypes = [UIActivityType.airDrop]
 			activityVC.popoverPresentationController?.barButtonItem = self.formatButton

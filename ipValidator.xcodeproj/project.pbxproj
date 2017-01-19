@@ -33,6 +33,7 @@
 		D1827A441D8EF8AA00D8E5CC /* ExportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
 		D1827A461D8EF8B900D8E5CC /* DNSConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSConfigViewController.swift; sourceTree = "<group>"; };
 		D1827A481D8F0C9100D8E5CC /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		D1BFCFA71E30DDB2004E145C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D1CEF4AE1D8DC47300C8D9B7 /* allIPsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = allIPsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +51,7 @@
 		D17306CA1D8D867E000EFDDA = {
 			isa = PBXGroup;
 			children = (
+				D1BFCFA71E30DDB2004E145C /* LICENSE */,
 				D17306D51D8D867E000EFDDA /* ipValidator */,
 				D17306D41D8D867E000EFDDA /* Products */,
 			);
@@ -66,20 +68,28 @@
 		D17306D51D8D867E000EFDDA /* ipValidator */ = {
 			isa = PBXGroup;
 			children = (
-				D1572F671D8FCD2A00FFC94F /* IPAddress.swift */,
-				D1CEF4AE1D8DC47300C8D9B7 /* allIPsTableViewController.swift */,
-				D1827A441D8EF8AA00D8E5CC /* ExportViewController.swift */,
-				D1827A461D8EF8B900D8E5CC /* DNSConfigViewController.swift */,
+				D1BFCFA81E30DDDD004E145C /* View Controllers */,
 				D17306D61D8D867E000EFDDA /* AppDelegate.swift */,
-				D17306D81D8D867E000EFDDA /* ViewController.swift */,
+				D1572F671D8FCD2A00FFC94F /* IPAddress.swift */,
 				D17306DA1D8D867E000EFDDA /* Main.storyboard */,
-				D1827A481D8F0C9100D8E5CC /* AboutViewController.swift */,
-				D17306E81D8D89F7000EFDDA /* ResultsTableViewController.swift */,
 				D17306DD1D8D867E000EFDDA /* Assets.xcassets */,
 				D17306DF1D8D867E000EFDDA /* LaunchScreen.storyboard */,
 				D17306E21D8D867E000EFDDA /* Info.plist */,
 			);
 			path = ipValidator;
+			sourceTree = "<group>";
+		};
+		D1BFCFA81E30DDDD004E145C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1CEF4AE1D8DC47300C8D9B7 /* allIPsTableViewController.swift */,
+				D1827A441D8EF8AA00D8E5CC /* ExportViewController.swift */,
+				D1827A461D8EF8B900D8E5CC /* DNSConfigViewController.swift */,
+				D17306D81D8D867E000EFDDA /* ViewController.swift */,
+				D1827A481D8F0C9100D8E5CC /* AboutViewController.swift */,
+				D17306E81D8D89F7000EFDDA /* ResultsTableViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,12 +119,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = mehmet;
 				TargetAttributes = {
 					D17306D21D8D867E000EFDDA = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = MEDK2J2T37;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -206,6 +215,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -256,6 +266,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -285,7 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MEDK2J2T37;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ipValidator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mehmet.ipValidator;
@@ -298,7 +309,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MEDK2J2T37;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ipValidator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mehmet.ipValidator;
