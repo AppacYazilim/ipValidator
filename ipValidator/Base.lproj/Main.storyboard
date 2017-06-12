@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D17a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AyO-yd-CCu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AyO-yd-CCu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,7 +57,7 @@ This application calculates and verifies ip addresses by calculating possible ip
                             <constraint firstAttribute="trailingMargin" secondItem="wxO-VD-RtQ" secondAttribute="trailing" id="nWj-OI-N8d"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="About" id="pNg-fl-W50">
+                    <navigationItem key="navigationItem" title="About" largeTitleDisplayMode="never" id="pNg-fl-W50">
                         <barButtonItem key="rightBarButtonItem" title="Source Code" id="Tgj-Qe-BXs">
                             <connections>
                                 <action selector="githubProfile:" destination="xbZ-T9-uTW" id="gzG-Pw-KRd"/>
@@ -134,7 +134,7 @@ This application calculates and verifies ip addresses by calculating possible ip
                             <constraint firstItem="OSa-L1-HXs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lS2-7V-rQW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="IP Validator" id="2pd-gS-vqk">
+                    <navigationItem key="navigationItem" title="IP Validator" largeTitleDisplayMode="always" id="2pd-gS-vqk">
                         <barButtonItem key="leftBarButtonItem" title="About" id="Fad-BN-lBI">
                             <connections>
                                 <segue destination="xbZ-T9-uTW" kind="show" id="FNA-ns-O1u"/>
@@ -166,21 +166,21 @@ This application calculates and verifies ip addresses by calculating possible ip
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" textLabel="e9a-7J-0SY" detailTextLabel="AQN-uZ-2kU" style="IBUITableViewCellStyleValue1" id="rkk-CH-aHy">
-                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rkk-CH-aHy" id="SA4-ZN-tH2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e9a-7J-0SY">
-                                            <rect key="frame" x="15" y="11" width="34" height="21"/>
+                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AQN-uZ-2kU">
-                                            <rect key="frame" x="316" y="11" width="44" height="21"/>
+                                            <rect key="frame" x="316" y="12" width="44" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -190,14 +190,14 @@ This application calculates and verifies ip addresses by calculating possible ip
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="showAll" textLabel="Ouo-oH-10n" style="IBUITableViewCellStyleDefault" id="OOB-e7-ibz">
-                                <rect key="frame" x="0.0" y="100" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OOB-e7-ibz" id="Cei-Mf-0On">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Show All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ouo-oH-10n">
-                                            <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                            <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -215,7 +215,7 @@ This application calculates and verifies ip addresses by calculating possible ip
                             <outlet property="delegate" destination="V74-Q7-wZc" id="1pK-4l-23n"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Results" id="QqD-jL-32a">
+                    <navigationItem key="navigationItem" title="Results" largeTitleDisplayMode="never" id="QqD-jL-32a">
                         <barButtonItem key="rightBarButtonItem" title="Export" id="Ezb-tO-SRW">
                             <connections>
                                 <segue destination="ecm-x3-BV3" kind="show" id="jHq-aQ-x89"/>
@@ -240,29 +240,29 @@ This application calculates and verifies ip addresses by calculating possible ip
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="psD-Hm-Iuo">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="16" y="116" width="343" height="551"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gateway" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-IN-ddh">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="26"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" translatesAutoresizingMaskIntoConstraints="NO" id="YtR-X6-oW5">
-                                        <rect key="frame" x="0.0" y="26" width="343" height="275.5"/>
+                                        <rect key="frame" x="0.0" y="24" width="343" height="251.5"/>
                                         <connections>
                                             <outlet property="dataSource" destination="ecm-x3-BV3" id="psb-za-MzD"/>
                                             <outlet property="delegate" destination="ecm-x3-BV3" id="fW9-S8-FoK"/>
                                         </connections>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DNS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09X-C0-sM5">
-                                        <rect key="frame" x="0.0" y="301.5" width="343" height="26"/>
+                                        <rect key="frame" x="0.0" y="275.5" width="343" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" translatesAutoresizingMaskIntoConstraints="NO" id="Hxv-RJ-w25">
-                                        <rect key="frame" x="0.0" y="327.5" width="343" height="275.5"/>
+                                        <rect key="frame" x="0.0" y="299.5" width="343" height="251.5"/>
                                         <connections>
                                             <outlet property="dataSource" destination="ecm-x3-BV3" id="5wO-Aq-lJl"/>
                                             <outlet property="delegate" destination="ecm-x3-BV3" id="qTZ-41-BDP"/>
@@ -357,18 +357,18 @@ static domain_name_servers=192.168.1.1</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BeL-zF-zXA" id="CFQ-je-3NQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Adress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="adf-Ux-Hnk">
-                                            <rect key="frame" x="15" y="11" width="53" height="21"/>
+                                            <rect key="frame" x="16" y="12" width="53" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FLy-PF-kG7">
-                                            <rect key="frame" x="316" y="11" width="44" height="21"/>
+                                            <rect key="frame" x="316" y="12" width="44" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -394,7 +394,7 @@ static domain_name_servers=192.168.1.1</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AyO-yd-CCu" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0kI-9Z-d0n">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="0kI-9Z-d0n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

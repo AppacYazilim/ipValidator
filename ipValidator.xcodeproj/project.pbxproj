@@ -124,7 +124,7 @@
 				TargetAttributes = {
 					D17306D21D8D867E000EFDDA = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = MEDK2J2T37;
+						DevelopmentTeam = 8XR5BFJ8PC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -297,7 +297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MEDK2J2T37;
+				DEVELOPMENT_TEAM = 8XR5BFJ8PC;
 				INFOPLIST_FILE = ipValidator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mehmet.ipValidator;
@@ -310,7 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MEDK2J2T37;
+				DEVELOPMENT_TEAM = 8XR5BFJ8PC;
 				INFOPLIST_FILE = ipValidator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mehmet.ipValidator;

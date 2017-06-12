@@ -40,10 +40,10 @@ class DNSConfigViewController: UIViewController , UIPickerViewDelegate, UIPicker
         // Do any additional setup after loading the view.
 		
 //		
-//		GWPicker.selectRow(0, inComponent: 0, animated: false);
-//		GWPicker.selectRow(0, inComponent: 1, animated: false);
-//		GWPicker.selectRow(IPaddr[2], inComponent: 2, animated: false);
-//		GWPicker.selectRow(IPaddr[3], inComponent: 3, animated: false);
+		GWPicker.selectRow(0, inComponent: 0, animated: false);
+		GWPicker.selectRow(0, inComponent: 1, animated: false);
+		GWPicker.selectRow(0, inComponent: 2, animated: false);
+		GWPicker.selectRow(1, inComponent: 3, animated: false);
 //		
 		
 		DNSPicker.selectRow(8, inComponent: 0, animated: false);
@@ -65,10 +65,7 @@ class DNSConfigViewController: UIViewController , UIPickerViewDelegate, UIPicker
 	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 		if pickerView == GWPicker {
 			return space[component] + (component != 3 ? 1 : 0);
-			
 		}
-		
-		
 		return 255
 	}
 	

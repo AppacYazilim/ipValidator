@@ -21,6 +21,16 @@
 
 import UIKit
 
+func iterateEnum<T: Hashable>(_: T.Type) -> AnyIterator<T> {
+	var i = 0
+	return AnyIterator {
+		let next = withUnsafeBytes(of: &i) { $0.load(as: T.self) }
+		if next.hashValue != i { return nil }
+		i += 1
+		return next
+	}
+}
+
 class ExportViewController: UIViewController {
 	@IBOutlet weak var formatButton: UIBarButtonItem!
 	@IBOutlet weak var textField: UITextView!
@@ -28,6 +38,18 @@ class ExportViewController: UIViewController {
 	enum ExportConfigs {
 		case dhcpd
 		case interfaces
+		case arduino
+		
+		func toString() -> String {
+			switch self {
+			case .dhcpd:
+				return "dhcpd.conf"
+			case .interfaces:
+				return "interfaces"
+			case .arduino:
+				return "Arduino"
+			}
+		}
 	}
 	
 	var config: ExportConfigs = .dhcpd
@@ -46,6 +68,10 @@ class ExportViewController: UIViewController {
 	var interface = "en0"
 	func ip(_ ip: [Int]) -> String {
 		return "\(ip[0]).\(ip[1]).\(ip[2]).\(ip[3])"
+	}
+	
+	func ip2(_ ip: [Int]) -> String {
+		return "\(ip[0]), \(ip[1]), \(ip[2]), \(ip[3])"
 	}
 	
     override func viewDidLoad() {
@@ -117,7 +143,100 @@ class ExportViewController: UIViewController {
 			
 			AttrString.append(NSAttributedString(string: "\nnetmask ", attributes: [ NSForegroundColorAttributeName: UIColor.orange]))
 			AttrString.append(NSAttributedString(string: "\(ip(Subnet))", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
+		case .arduino:
+			
+			
+			AttrString.append(NSAttributedString(string: "#include ", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
+			AttrString.append(NSAttributedString(string: "<", attributes: [ NSForegroundColorAttributeName: UIColor.gray]))
+			AttrString.append(NSAttributedString(string: "SPI", attributes: [ NSForegroundColorAttributeName: UIColor.orange]))
+			AttrString.append(NSAttributedString(string: ".h>\n", attributes: [ NSForegroundColorAttributeName: UIColor.gray]))
+			
+			AttrString.append(NSAttributedString(string: "#include ", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
+			AttrString.append(NSAttributedString(string: "<", attributes: [ NSForegroundColorAttributeName: UIColor.gray]))
+			AttrString.append(NSAttributedString(string: "WiFi", attributes: [ NSForegroundColorAttributeName: UIColor.orange]))
+			AttrString.append(NSAttributedString(string: ".h>\n\n", attributes: [ NSForegroundColorAttributeName: UIColor.gray]))
+			
+			
+			AttrString.append(NSAttributedString(string: "char", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " ssid[] = ", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "\"networkSSID\"", attributes: [ NSForegroundColorAttributeName: UIColor.red]))
+			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			
+			AttrString.append(NSAttributedString(string: "char", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " pass[] = ", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "\"networkPassword\"", attributes: [ NSForegroundColorAttributeName: UIColor.red]))
+			AttrString.append(NSAttributedString(string: ";\n\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			
+			AttrString.append(NSAttributedString(string: "IPAddress", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " ip", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "(", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ip2(IPaddr), attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ")", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			
+			AttrString.append(NSAttributedString(string: "IPAddress", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " dns", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "(", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ip2(DNSaddr), attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ")", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			
+			AttrString.append(NSAttributedString(string: "IPAddress", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " gateway", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "(", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ip2(GWaddr), attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ")", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			
+			
+			AttrString.append(NSAttributedString(string: "IPAddress", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " subnet", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "(", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ip2(Subnet), attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ")", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			
+			
+			AttrString.append(NSAttributedString(string: "\nvoid", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " setup", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "(", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ")", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "{\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			
+			
+			AttrString.append(NSAttributedString(string: "\tWiFi.begin(ssid, pass);\n\tWiFi.config(ip, dns, gateway, subnet);\n*", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			
+			
+			AttrString.append(NSAttributedString(string: "}\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			
+			/*
+			
+			#include <WiFi.h>
+			
+			char ssid[] = "networkSSID";
+			char pass[] = "networkPassword";
+			
+			IPAddress ip(0, 0, 0, 0);
+			IPAddress dns(0, 0, 0, 0);
+			IPAddress gateway(0, 0, 0, 0);
+			IPAddress subnet(0, 0, 0, 0);
+			
+			void setup() {
+			// put your setup code here, to run once:
+			WiFi.begin(ssid, pass);
+			WiFi.config(ip, dns, gateway, subnet);
+			
+			}
+			
+			void loop() {
+			// put your main code here, to run repeatedly:
+			}
+			
+			*/
+			
+			
 		}
+		AttrString.addAttribute(NSFontAttributeName, value: UIFont(name: "CourierNewPS-BoldMT", size: 14.0)!, range: NSMakeRange(0, AttrString.length))
 		
 		self.textField.attributedText = AttrString
 	}
@@ -134,24 +253,18 @@ class ExportViewController: UIViewController {
 			self.present(activityVC, animated: true, completion: nil)
 		}))
 		
-		if config != .dhcpd {
-			alert.addAction(UIAlertAction(title: "Switch To dhcpd.conf", style: .default, handler: { (_) in
-				print("dhcpd.conf");
-				self.config = .dhcpd
-				self.prepareConfig()
-			}))
-		}
 		
-		if config != .interfaces {
-			alert.addAction(UIAlertAction(title: "Switch To interfaces format", style: .default, handler: { (_) in
-				print("dhcpd.conf");
-				self.config = .interfaces
-				self.prepareConfig()
-			}))
+		for i in iterateEnum(ExportViewController.ExportConfigs) {
+//			if config != i {
+				alert.addAction(UIAlertAction(title: "Switch To \(i.toString()) Format", style: .default, handler: { (_) in
+					print(i.toString());
+					self.config = i
+					self.prepareConfig()
+				}))
+//			}
 		}
 		
 		alert.addAction(UIAlertAction(title: "Copy Text", style: .default, handler: { (_) in
-			print("dhcpd.conf");
 			UIPasteboard.general.string = self.textField.text
 		}))
 		
