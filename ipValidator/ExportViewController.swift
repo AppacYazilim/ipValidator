@@ -102,24 +102,24 @@ class ExportViewController: UIViewController {
 			static routers=192.168.1.1
 			static domain_name_servers=192.168.1.1
 			*/
-			AttrString.append(NSAttributedString(string: "#dhcpd.conf file", attributes: [ NSForegroundColorAttributeName: UIColor.red]))
-			AttrString.append(NSAttributedString(string: "\ninterface", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
-			AttrString.append(NSAttributedString(string: " \(interface)", attributes: [ NSForegroundColorAttributeName: UIColor.purple]))
+			AttrString.append(NSAttributedString(string: "#dhcpd.conf file", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.red]))
+			AttrString.append(NSAttributedString(string: "\ninterface", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " \(interface)", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.purple]))
 			
-			AttrString.append(NSAttributedString(string: "\nstatic ", attributes: [ NSForegroundColorAttributeName: UIColor.orange]))
-			AttrString.append(NSAttributedString(string: "ip_address", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
-			AttrString.append(NSAttributedString(string: "=", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: "\(ip(IPaddr))/\(networkSize)", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
+			AttrString.append(NSAttributedString(string: "\nstatic ", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.orange]))
+			AttrString.append(NSAttributedString(string: "ip_address", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.green]))
+			AttrString.append(NSAttributedString(string: "=", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "\(ip(IPaddr))/\(networkSize)", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.green]))
 			
-			AttrString.append(NSAttributedString(string: "\nstatic ", attributes: [ NSForegroundColorAttributeName: UIColor.orange]))
-			AttrString.append(NSAttributedString(string: "routers", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
-			AttrString.append(NSAttributedString(string: "=", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: "\(ip(GWaddr))", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
+			AttrString.append(NSAttributedString(string: "\nstatic ", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.orange]))
+			AttrString.append(NSAttributedString(string: "routers", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.green]))
+			AttrString.append(NSAttributedString(string: "=", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "\(ip(GWaddr))", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.green]))
 			
-			AttrString.append(NSAttributedString(string: "\nstatic ", attributes: [ NSForegroundColorAttributeName: UIColor.orange]))
-			AttrString.append(NSAttributedString(string: "domain_name_servers", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
-			AttrString.append(NSAttributedString(string: "=", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: "\(ip(DNSaddr))", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
+			AttrString.append(NSAttributedString(string: "\nstatic ", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.orange]))
+			AttrString.append(NSAttributedString(string: "domain_name_servers", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.green]))
+			AttrString.append(NSAttributedString(string: "=", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "\(ip(DNSaddr))", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.green]))
 		case .interfaces:
 			/*
 
@@ -130,84 +130,84 @@ class ExportViewController: UIViewController {
 			*/
 			
 			
-			AttrString.append(NSAttributedString(string: "#interfaces file", attributes: [ NSForegroundColorAttributeName: UIColor.red]))
-			AttrString.append(NSAttributedString(string: "\niface", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
-			AttrString.append(NSAttributedString(string: " \(interface)", attributes: [ NSForegroundColorAttributeName: UIColor.purple]))
-			AttrString.append(NSAttributedString(string: " inet static", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: "#interfaces file", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.red]))
+			AttrString.append(NSAttributedString(string: "\niface", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " \(interface)", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.purple]))
+			AttrString.append(NSAttributedString(string: " inet static", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.blue]))
 			
-			AttrString.append(NSAttributedString(string: "\naddress ", attributes: [ NSForegroundColorAttributeName: UIColor.orange]))
-			AttrString.append(NSAttributedString(string: "\(ip(IPaddr))", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
+			AttrString.append(NSAttributedString(string: "\naddress ", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.orange]))
+			AttrString.append(NSAttributedString(string: "\(ip(IPaddr))", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.green]))
 			
-			AttrString.append(NSAttributedString(string: "\ngateway ", attributes: [ NSForegroundColorAttributeName: UIColor.orange]))
-			AttrString.append(NSAttributedString(string: "\(ip(GWaddr))", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
+			AttrString.append(NSAttributedString(string: "\ngateway ", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.orange]))
+			AttrString.append(NSAttributedString(string: "\(ip(GWaddr))", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.green]))
 			
-			AttrString.append(NSAttributedString(string: "\nnetmask ", attributes: [ NSForegroundColorAttributeName: UIColor.orange]))
-			AttrString.append(NSAttributedString(string: "\(ip(Subnet))", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
+			AttrString.append(NSAttributedString(string: "\nnetmask ", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.orange]))
+			AttrString.append(NSAttributedString(string: "\(ip(Subnet))", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.green]))
 		case .arduino:
 			
 			
-			AttrString.append(NSAttributedString(string: "#include ", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
-			AttrString.append(NSAttributedString(string: "<", attributes: [ NSForegroundColorAttributeName: UIColor.gray]))
-			AttrString.append(NSAttributedString(string: "SPI", attributes: [ NSForegroundColorAttributeName: UIColor.orange]))
-			AttrString.append(NSAttributedString(string: ".h>\n", attributes: [ NSForegroundColorAttributeName: UIColor.gray]))
+			AttrString.append(NSAttributedString(string: "#include ", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.green]))
+			AttrString.append(NSAttributedString(string: "<", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.gray]))
+			AttrString.append(NSAttributedString(string: "SPI", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.orange]))
+			AttrString.append(NSAttributedString(string: ".h>\n", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.gray]))
 			
-			AttrString.append(NSAttributedString(string: "#include ", attributes: [ NSForegroundColorAttributeName: UIColor.green]))
-			AttrString.append(NSAttributedString(string: "<", attributes: [ NSForegroundColorAttributeName: UIColor.gray]))
-			AttrString.append(NSAttributedString(string: "WiFi", attributes: [ NSForegroundColorAttributeName: UIColor.orange]))
-			AttrString.append(NSAttributedString(string: ".h>\n\n", attributes: [ NSForegroundColorAttributeName: UIColor.gray]))
-			
-			
-			AttrString.append(NSAttributedString(string: "char", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
-			AttrString.append(NSAttributedString(string: " ssid[] = ", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: "\"networkSSID\"", attributes: [ NSForegroundColorAttributeName: UIColor.red]))
-			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			
-			AttrString.append(NSAttributedString(string: "char", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
-			AttrString.append(NSAttributedString(string: " pass[] = ", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: "\"networkPassword\"", attributes: [ NSForegroundColorAttributeName: UIColor.red]))
-			AttrString.append(NSAttributedString(string: ";\n\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			
-			AttrString.append(NSAttributedString(string: "IPAddress", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
-			AttrString.append(NSAttributedString(string: " ip", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: "(", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: ip2(IPaddr), attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: ")", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			
-			AttrString.append(NSAttributedString(string: "IPAddress", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
-			AttrString.append(NSAttributedString(string: " dns", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: "(", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: ip2(DNSaddr), attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: ")", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			
-			AttrString.append(NSAttributedString(string: "IPAddress", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
-			AttrString.append(NSAttributedString(string: " gateway", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: "(", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: ip2(GWaddr), attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: ")", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "#include ", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.green]))
+			AttrString.append(NSAttributedString(string: "<", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.gray]))
+			AttrString.append(NSAttributedString(string: "WiFi", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.orange]))
+			AttrString.append(NSAttributedString(string: ".h>\n\n", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.gray]))
 			
 			
-			AttrString.append(NSAttributedString(string: "IPAddress", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
-			AttrString.append(NSAttributedString(string: " subnet", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: "(", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: ip2(Subnet), attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: ")", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "char", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " ssid[] = ", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "\"networkSSID\"", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.red]))
+			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			
+			AttrString.append(NSAttributedString(string: "char", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " pass[] = ", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "\"networkPassword\"", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.red]))
+			AttrString.append(NSAttributedString(string: ";\n\n", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			
+			AttrString.append(NSAttributedString(string: "IPAddress", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " ip", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "(", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ip2(IPaddr), attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ")", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			
+			AttrString.append(NSAttributedString(string: "IPAddress", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " dns", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "(", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ip2(DNSaddr), attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ")", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			
+			AttrString.append(NSAttributedString(string: "IPAddress", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " gateway", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "(", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ip2(GWaddr), attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ")", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
 			
 			
-			AttrString.append(NSAttributedString(string: "\nvoid", attributes: [ NSForegroundColorAttributeName: UIColor.blue]))
-			AttrString.append(NSAttributedString(string: " setup", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: "(", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: ")", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
-			AttrString.append(NSAttributedString(string: "{\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "IPAddress", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " subnet", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "(", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ip2(Subnet), attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ")", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ";\n", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
 			
 			
-			AttrString.append(NSAttributedString(string: "\tWiFi.begin(ssid, pass);\n\tWiFi.config(ip, dns, gateway, subnet);\n*", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "\nvoid", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.blue]))
+			AttrString.append(NSAttributedString(string: " setup", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "(", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: ")", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "{\n", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
 			
 			
-			AttrString.append(NSAttributedString(string: "}\n", attributes: [ NSForegroundColorAttributeName: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "\tWiFi.begin(ssid, pass);\n\tWiFi.config(ip, dns, gateway, subnet);\n*", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			
+			
+			AttrString.append(NSAttributedString(string: "}\n", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
 			
 			/*
 			
@@ -236,7 +236,7 @@ class ExportViewController: UIViewController {
 			
 			
 		}
-		AttrString.addAttribute(NSFontAttributeName, value: UIFont(name: "CourierNewPS-BoldMT", size: 14.0)!, range: NSMakeRange(0, AttrString.length))
+		AttrString.addAttribute(NSAttributedStringKey.font, value: UIFont(name: "CourierNewPS-BoldMT", size: 14.0)!, range: NSMakeRange(0, AttrString.length))
 		
 		self.textField.attributedText = AttrString
 	}
