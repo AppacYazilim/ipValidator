@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D101F48E1F5E9C7400D68C2D /* ipValidatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D101F48D1F5E9C7400D68C2D /* ipValidatorUITests.swift */; };
 		D1572F681D8FCD2A00FFC94F /* IPAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1572F671D8FCD2A00FFC94F /* IPAddress.swift */; };
 		D17306D71D8D867E000EFDDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17306D61D8D867E000EFDDA /* AppDelegate.swift */; };
 		D17306D91D8D867E000EFDDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17306D81D8D867E000EFDDA /* ViewController.swift */; };
@@ -20,7 +21,20 @@
 		D1CEF4AF1D8DC47300C8D9B7 /* allIPsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CEF4AE1D8DC47300C8D9B7 /* allIPsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D101F4901F5E9C7400D68C2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D17306CB1D8D867E000EFDDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D17306D21D8D867E000EFDDA;
+			remoteInfo = ipValidator;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		D101F48B1F5E9C7400D68C2D /* ipValidatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ipValidatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D101F48D1F5E9C7400D68C2D /* ipValidatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ipValidatorUITests.swift; sourceTree = "<group>"; };
+		D101F48F1F5E9C7400D68C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1572F671D8FCD2A00FFC94F /* IPAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPAddress.swift; sourceTree = "<group>"; };
 		D17306D31D8D867E000EFDDA /* ipValidator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipValidator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17306D61D8D867E000EFDDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D101F4881F5E9C7400D68C2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D17306D01D8D867E000EFDDA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,11 +69,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D101F48C1F5E9C7400D68C2D /* ipValidatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D101F48D1F5E9C7400D68C2D /* ipValidatorUITests.swift */,
+				D101F48F1F5E9C7400D68C2D /* Info.plist */,
+			);
+			path = ipValidatorUITests;
+			sourceTree = "<group>";
+		};
 		D17306CA1D8D867E000EFDDA = {
 			isa = PBXGroup;
 			children = (
 				D1BFCFA71E30DDB2004E145C /* LICENSE */,
 				D17306D51D8D867E000EFDDA /* ipValidator */,
+				D101F48C1F5E9C7400D68C2D /* ipValidatorUITests */,
 				D17306D41D8D867E000EFDDA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				D17306D31D8D867E000EFDDA /* ipValidator.app */,
+				D101F48B1F5E9C7400D68C2D /* ipValidatorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +127,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D101F48A1F5E9C7400D68C2D /* ipValidatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D101F4921F5E9C7400D68C2D /* Build configuration list for PBXNativeTarget "ipValidatorUITests" */;
+			buildPhases = (
+				D101F4871F5E9C7400D68C2D /* Sources */,
+				D101F4881F5E9C7400D68C2D /* Frameworks */,
+				D101F4891F5E9C7400D68C2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D101F4911F5E9C7400D68C2D /* PBXTargetDependency */,
+			);
+			name = ipValidatorUITests;
+			productName = ipValidatorUITests;
+			productReference = D101F48B1F5E9C7400D68C2D /* ipValidatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D17306D21D8D867E000EFDDA /* ipValidator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D17306E51D8D867E000EFDDA /* Build configuration list for PBXNativeTarget "ipValidator" */;
@@ -118,10 +168,16 @@
 		D17306CB1D8D867E000EFDDA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = mehmet;
 				TargetAttributes = {
+					D101F48A1F5E9C7400D68C2D = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = 8XR5BFJ8PC;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D17306D21D8D867E000EFDDA;
+					};
 					D17306D21D8D867E000EFDDA = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8XR5BFJ8PC;
@@ -144,11 +200,19 @@
 			projectRoot = "";
 			targets = (
 				D17306D21D8D867E000EFDDA /* ipValidator */,
+				D101F48A1F5E9C7400D68C2D /* ipValidatorUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D101F4891F5E9C7400D68C2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D17306D11D8D867E000EFDDA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,6 +226,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D101F4871F5E9C7400D68C2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D101F48E1F5E9C7400D68C2D /* ipValidatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D17306CF1D8D867E000EFDDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,6 +250,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D101F4911F5E9C7400D68C2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D17306D21D8D867E000EFDDA /* ipValidator */;
+			targetProxy = D101F4901F5E9C7400D68C2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D17306DA1D8D867E000EFDDA /* Main.storyboard */ = {
@@ -199,6 +279,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D101F4931F5E9C7400D68C2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8XR5BFJ8PC;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ipValidatorUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mekatrotekno.ipValidatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ipValidator;
+			};
+			name = Debug;
+		};
+		D101F4941F5E9C7400D68C2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8XR5BFJ8PC;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ipValidatorUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mekatrotekno.ipValidatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ipValidator;
+			};
+			name = Release;
+		};
 		D17306E31D8D867E000EFDDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -337,6 +459,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D101F4921F5E9C7400D68C2D /* Build configuration list for PBXNativeTarget "ipValidatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D101F4931F5E9C7400D68C2D /* Debug */,
+				D101F4941F5E9C7400D68C2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D17306CE1D8D867E000EFDDA /* Build configuration list for PBXProject "ipValidator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
