@@ -254,7 +254,7 @@ class ExportViewController: UIViewController {
 		}))
 		
 		
-		for i in iterateEnum(ExportViewController.ExportConfigs) {
+		for i in iterateEnum(ExportViewController.ExportConfigs.self) {
 //			if config != i {
 				alert.addAction(UIAlertAction(title: "Switch To \(i.toString()) Format", style: .default, handler: { (_) in
 					print(i.toString());
