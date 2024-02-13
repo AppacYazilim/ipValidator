@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AyO-yd-CCu">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AyO-yd-CCu">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,16 +16,16 @@
                         <viewControllerLayoutGuide type="bottom" id="4we-kY-16L"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aC4-aC-XNL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxO-VD-RtQ">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="20" y="91" width="388" height="801"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Network Calculator &amp; Validator">
                                         <attributes>
-                                            <font key="NSFont" size="24" name=".SFNSText"/>
-                                            <font key="NSOriginalFont" size="24" name=".SFNSText"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <font key="NSOriginalFont" metaFont="system" size="24"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             <shadow key="NSShadow" blurRadius="10">
                                                 <size key="offset" width="1.8369701987210297e-16" height="3"/>
@@ -41,7 +38,7 @@
 This application calculates and verifies ip addresses by calculating possible ip addresses
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="18" name=".AppleSystemUIFont"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -78,46 +75,46 @@ This application calculates and verifies ip addresses by calculating possible ip
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="OSa-L1-HXs">
-                                <rect key="frame" x="16" y="74" width="343" height="593"/>
+                                <rect key="frame" x="20" y="153" width="388" height="739"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c63-bd-yaq">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="388" height="21.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" translatesAutoresizingMaskIntoConstraints="NO" id="ERa-EF-YeM">
-                                        <rect key="frame" x="0.0" y="17" width="343" height="180.5"/>
+                                        <rect key="frame" x="0.0" y="21.333333333333343" width="388" height="225"/>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="26x-9R-r96"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="M0S-R3-KAm"/>
                                         </connections>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subnet Mask" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5r-tQ-bcL">
-                                        <rect key="frame" x="0.0" y="197.5" width="343" height="17.5"/>
+                                        <rect key="frame" x="0.0" y="246.33333333333334" width="388" height="21.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" translatesAutoresizingMaskIntoConstraints="NO" id="inT-7L-jhc">
-                                        <rect key="frame" x="0.0" y="215" width="343" height="180.5"/>
+                                        <rect key="frame" x="0.0" y="267.66666666666669" width="388" height="225"/>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="yks-KI-5Pa"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="c7e-m2-LVS"/>
                                         </connections>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connectable IP Addresses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIx-5y-Gsj">
-                                        <rect key="frame" x="0.0" y="395.5" width="343" height="17"/>
+                                        <rect key="frame" x="0.0" y="492.66666666666663" width="388" height="21.333333333333371"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" translatesAutoresizingMaskIntoConstraints="NO" id="fJt-LA-JR3">
-                                        <rect key="frame" x="0.0" y="412.5" width="343" height="180.5"/>
+                                        <rect key="frame" x="0.0" y="514" width="388" height="225"/>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="VQi-bC-FVb"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="ovH-JW-LcS"/>
@@ -161,26 +158,26 @@ This application calculates and verifies ip addresses by calculating possible ip
             <objects>
                 <tableViewController id="V74-Q7-wZc" customClass="ResultsTableViewController" customModule="ipValidator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="7uX-yC-Ese">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" textLabel="e9a-7J-0SY" detailTextLabel="AQN-uZ-2kU" style="IBUITableViewCellStyleValue1" id="rkk-CH-aHy">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.333332061767578" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rkk-CH-aHy" id="SA4-ZN-tH2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e9a-7J-0SY">
-                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="20" y="11.999999999999998" width="33" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AQN-uZ-2kU">
-                                            <rect key="frame" x="316" y="12" width="44" height="20.5"/>
+                                            <rect key="frame" x="364.33333333333331" y="11.999999999999998" width="43.666666666666664" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -190,14 +187,14 @@ This application calculates and verifies ip addresses by calculating possible ip
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="showAll" textLabel="Ouo-oH-10n" style="IBUITableViewCellStyleDefault" id="OOB-e7-ibz">
-                                <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="99.333332061767578" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OOB-e7-ibz" id="Cei-Mf-0On">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="397.66666666666669" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Show All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ouo-oH-10n">
-                                            <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="369.66666666666669" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -236,33 +233,33 @@ This application calculates and verifies ip addresses by calculating possible ip
                         <viewControllerLayoutGuide type="bottom" id="13B-SN-15N"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="x4P-Qf-ugY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="psD-Hm-Iuo">
-                                <rect key="frame" x="16" y="116" width="343" height="551"/>
+                                <rect key="frame" x="20" y="91" width="388" height="801"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gateway" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-IN-ddh">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="388" height="34.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" translatesAutoresizingMaskIntoConstraints="NO" id="YtR-X6-oW5">
-                                        <rect key="frame" x="0.0" y="24" width="343" height="251.5"/>
+                                        <rect key="frame" x="0.0" y="34.333333333333343" width="388" height="366.33333333333326"/>
                                         <connections>
                                             <outlet property="dataSource" destination="ecm-x3-BV3" id="psb-za-MzD"/>
                                             <outlet property="delegate" destination="ecm-x3-BV3" id="fW9-S8-FoK"/>
                                         </connections>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DNS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09X-C0-sM5">
-                                        <rect key="frame" x="0.0" y="275.5" width="343" height="24"/>
+                                        <rect key="frame" x="0.0" y="400.66666666666669" width="388" height="34.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" translatesAutoresizingMaskIntoConstraints="NO" id="Hxv-RJ-w25">
-                                        <rect key="frame" x="0.0" y="299.5" width="343" height="251.5"/>
+                                        <rect key="frame" x="0.0" y="435" width="388" height="366"/>
                                         <connections>
                                             <outlet property="dataSource" destination="ecm-x3-BV3" id="5wO-Aq-lJl"/>
                                             <outlet property="delegate" destination="ecm-x3-BV3" id="qTZ-41-BDP"/>
@@ -304,11 +301,11 @@ This application calculates and verifies ip addresses by calculating possible ip
                         <viewControllerLayoutGuide type="bottom" id="KEq-OZ-vTM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aYD-Nd-CM6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqt-uR-6U3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text"># dhcpcd.conf
 interface eth0
@@ -323,7 +320,7 @@ static domain_name_servers=192.168.1.1</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fqt-uR-6U3" firstAttribute="top" secondItem="aYD-Nd-CM6" secondAttribute="top" id="38T-uf-6MF"/>
-                            <constraint firstItem="KEq-OZ-vTM" firstAttribute="top" secondItem="fqt-uR-6U3" secondAttribute="bottom" id="FXX-9v-7ov"/>
+                            <constraint firstAttribute="bottom" secondItem="fqt-uR-6U3" secondAttribute="bottom" id="FXX-9v-7ov"/>
                             <constraint firstAttribute="trailing" secondItem="fqt-uR-6U3" secondAttribute="trailing" id="IaV-PC-KvZ"/>
                             <constraint firstItem="fqt-uR-6U3" firstAttribute="leading" secondItem="aYD-Nd-CM6" secondAttribute="leading" id="bPN-OR-mkr"/>
                         </constraints>
@@ -349,26 +346,26 @@ static domain_name_servers=192.168.1.1</string>
             <objects>
                 <tableViewController id="Q5W-MB-wwz" customClass="allIPsTableViewController" customModule="ipValidator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ur1-gN-oBM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" textLabel="adf-Ux-Hnk" detailTextLabel="FLy-PF-kG7" style="IBUITableViewCellStyleValue1" id="BeL-zF-zXA">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="50" width="428" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BeL-zF-zXA" id="CFQ-je-3NQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Adress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="adf-Ux-Hnk">
-                                            <rect key="frame" x="16" y="12" width="53" height="20.5"/>
+                                            <rect key="frame" x="19.999999999999996" y="11.999999999999998" width="52.666666666666664" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FLy-PF-kG7">
-                                            <rect key="frame" x="316" y="12" width="44" height="20.5"/>
+                                            <rect key="frame" x="364.33333333333331" y="11.999999999999998" width="43.666666666666664" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -395,7 +392,7 @@ static domain_name_servers=192.168.1.1</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AyO-yd-CCu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="0kI-9Z-d0n">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="428" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -408,4 +405,9 @@ static domain_name_servers=192.168.1.1</string>
             <point key="canvasLocation" x="270" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
