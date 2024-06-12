@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "31E9F647-3051-4CB5-BD6D-7A1EE3A11CE3",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ipValidator.xcodeproj",
+      "identifier" : "D17306D21D8D867E000EFDDA",
+      "name" : "ipValidator"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ipValidator.xcodeproj",
+        "identifier" : "D101F48A1F5E9C7400D68C2D",
+        "name" : "ipValidatorUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
