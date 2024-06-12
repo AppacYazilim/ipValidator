@@ -35,7 +35,7 @@ class ExportViewController: UIViewController {
 	@IBOutlet weak var formatButton: UIBarButtonItem!
 	@IBOutlet weak var textField: UITextView!
 	
-	enum ExportConfigs {
+  enum ExportConfigs: CaseIterable {
 		case dhcpd
 		case interfaces
 		case arduino
@@ -204,7 +204,7 @@ class ExportViewController: UIViewController {
 			AttrString.append(NSAttributedString(string: "{\n", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
 			
 			
-			AttrString.append(NSAttributedString(string: "\tWiFi.begin(ssid, pass);\n\tWiFi.config(ip, dns, gateway, subnet);\n*", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
+			AttrString.append(NSAttributedString(string: "\tWiFi.begin(ssid, pass);\n\tWiFi.config(ip, dns, gateway, subnet);\n", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
 			
 			
 			AttrString.append(NSAttributedString(string: "}\n", attributes: [ NSAttributedStringKey.foregroundColor: UIColor.white]))
@@ -254,14 +254,14 @@ class ExportViewController: UIViewController {
 		}))
 		
 		
-		for i in iterateEnum(ExportViewController.ExportConfigs.self) {
-//			if config != i {
+    for i in ExportViewController.ExportConfigs.allCases {
+			if config != i {
 				alert.addAction(UIAlertAction(title: "Switch To \(i.toString()) Format", style: .default, handler: { (_) in
 					print(i.toString());
 					self.config = i
 					self.prepareConfig()
 				}))
-//			}
+			}
 		}
 		
 		alert.addAction(UIAlertAction(title: "Copy Text", style: .default, handler: { (_) in
