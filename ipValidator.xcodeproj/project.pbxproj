@@ -49,6 +49,7 @@
 		D1827A481D8F0C9100D8E5CC /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D1BFCFA71E30DDB2004E145C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D1CEF4AE1D8DC47300C8D9B7 /* allIPsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = allIPsTableViewController.swift; sourceTree = "<group>"; };
+		F0BC185F2C19B6FE00B9D135 /* ipValidator.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ipValidator.xctestplan; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,7 @@
 		D101F48C1F5E9C7400D68C2D /* ipValidatorUITests */ = {
 			isa = PBXGroup;
 			children = (
+				F0BC185F2C19B6FE00B9D135 /* ipValidator.xctestplan */,
 				D101F48D1F5E9C7400D68C2D /* ipValidatorUITests.swift */,
 				D101F48F1F5E9C7400D68C2D /* Info.plist */,
 			);
