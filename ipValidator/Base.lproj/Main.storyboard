@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AyO-yd-CCu">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23089" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AyO-yd-CCu">
+    <device id="retina6_7" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23077"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,7 +46,7 @@ This application calculates and verifies ip addresses by calculating possible ip
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wxO-VD-RtQ" firstAttribute="leading" secondItem="aC4-aC-XNL" secondAttribute="leadingMargin" id="IYu-Qm-BYx"/>
                             <constraint firstItem="wxO-VD-RtQ" firstAttribute="top" secondItem="PRX-IR-O69" secondAttribute="bottom" id="jEm-Aa-h9D"/>
@@ -123,7 +123,7 @@ This application calculates and verifies ip addresses by calculating possible ip
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OSa-L1-HXs" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="WZX-jZ-r3x"/>
                             <constraint firstItem="OSa-L1-HXs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Y5E-Yf-iOs"/>
@@ -268,7 +268,7 @@ This application calculates and verifies ip addresses by calculating possible ip
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="05x-bE-8ph" firstAttribute="bottom" secondItem="psD-Hm-Iuo" secondAttribute="top" id="7fj-hV-OaH"/>
                             <constraint firstItem="psD-Hm-Iuo" firstAttribute="bottom" secondItem="13B-SN-15N" secondAttribute="top" id="Nk8-aD-AM5"/>
@@ -306,7 +306,6 @@ This application calculates and verifies ip addresses by calculating possible ip
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqt-uR-6U3">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text"># dhcpcd.conf
 interface eth0
 static ip_address=192.168.1.141/24
@@ -317,7 +316,7 @@ static domain_name_servers=192.168.1.1</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fqt-uR-6U3" firstAttribute="top" secondItem="aYD-Nd-CM6" secondAttribute="top" id="38T-uf-6MF"/>
                             <constraint firstAttribute="bottom" secondItem="fqt-uR-6U3" secondAttribute="bottom" id="FXX-9v-7ov"/>
@@ -348,7 +347,7 @@ static domain_name_servers=192.168.1.1</string>
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ur1-gN-oBM">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" textLabel="adf-Ux-Hnk" detailTextLabel="FLy-PF-kG7" style="IBUITableViewCellStyleValue1" id="BeL-zF-zXA">
                                 <rect key="frame" x="0.0" y="50" width="428" height="44"/>
@@ -408,6 +407,9 @@ static domain_name_servers=192.168.1.1</string>
     <resources>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
